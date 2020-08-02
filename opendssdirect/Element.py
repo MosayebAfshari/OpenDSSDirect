@@ -1,22 +1,33 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import
-from ._utils import lib, CheckForError, get_string, get_string_array
+from ._utils import CheckForError, api_util, Base
 
 
-def AllPropertyNames():
-    """(read-only) Array of strings containing the names of all properties for the active DSS object."""
-    return CheckForError(get_string_array(lib.DSSElement_Get_AllPropertyNames))
+class IElement(Base):
+    __slots__ = ["Properties"]
+    _api_prefix = "DSSElement"
+    _columns = ["AllPropertyNames", "Name", "NumProperties"]
+
+    def AllPropertyNames(self):
+        """(read-only) Array of strings containing the names of all properties for the active DSS object."""
+        return self.CheckForError(
+            self._get_string_array(self._lib.DSSElement_Get_AllPropertyNames)
+        )
+
+    def Name(self):
+        """(read-only) Full Name of Active DSS Object (general element or circuit element)."""
+        return self._get_string(self.CheckForError(self._lib.DSSElement_Get_Name()))
+
+    def NumProperties(self):
+        """(read-only) Number of Properties for the active DSS object."""
+        return self.CheckForError(self._lib.DSSElement_Get_NumProperties())
 
 
-def Name():
-    """(read-only) Full Name of Active DSS Object (general element or circuit element)."""
-    return get_string(CheckForError(lib.DSSElement_Get_Name()))
+_Element = IElement(api_util)
 
-
-def NumProperties():
-    """(read-only) Number of Properties for the active DSS object."""
-    return CheckForError(lib.DSSElement_Get_NumProperties())
-
-
-_columns = ["Name", "NumProperties", "AllPropertyNames"]
+# For backwards compatibility, bind to the default instance
+AllPropertyNames = _Element.AllPropertyNames
+Name = _Element.Name
+NumProperties = _Element.NumProperties
+_columns = _Element._columns
 __all__ = ["AllPropertyNames", "Name", "NumProperties"]
