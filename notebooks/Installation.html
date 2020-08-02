@@ -1,15 +1,18 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; OpenDSSDirect.py 0.3.1 documentation</title>
+  <title>Installation &mdash; OpenDSSDirect.py 0.5.0 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
 
   
   
@@ -17,39 +20,39 @@
   
 
   
-
-  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Getting Started" href="GettingStarted.html" />
-    <link rel="prev" title="Indices and tables" href="../index.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+    <link rel="prev" title="OpenDSSDirect.py" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="../index.html" class="icon icon-home"> OpenDSSDirect.py
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> OpenDSSDirect.py
           
 
           
@@ -59,7 +62,7 @@
             
             
               <div class="version">
-                0.3.1
+                0.5.0
               </div>
             
           
@@ -76,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -94,12 +98,13 @@
 <li class="toctree-l1"><a class="reference internal" href="GettingStarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Example-OpenDSSDirect.py.html">Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ActiveClass.html">Using ActiveClass interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../opendssdirect.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opendssdirect.html">opendssdirect package</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -138,7 +143,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Installation</li>
     
@@ -164,36 +169,35 @@
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
-.nbinput.nblast,
-.nboutput.nblast {
+.nbinput.nblast.container,
+.nboutput.nblast.container {
     margin-bottom: 19px;  /* padding has already 5px */
 }
 
 /* ... except between code cells! */
-.nblast + .nbinput {
+.nblast.container + .nbinput.container {
     margin-top: -19px;
 }
 
 .admonition > p:before {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="section" id="Installation">
 <h1>Installation<a class="headerlink" href="#Installation" title="Permalink to this headline">¶</a></h1>
-<p>Users can install the current version of <code class="docutils literal notranslate"><span class="pre">OpenDSSDirect.py</span></code> with
-<code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
-<p><strong>Recommended</strong>: Use <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a> or
-<a class="reference external" href="https://www.continuum.io/downloads">Anaconda</a> to install Python</p>
+<p>Users can install the current version of <code class="docutils literal notranslate"><span class="pre">OpenDSSDirect.py</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+<p><strong>Recommended</strong>: Use <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a> or <a class="reference external" href="https://www.continuum.io/downloads">Anaconda</a> to install Python</p>
 <div class="section" id="With-pip">
 <h2>With <code class="docutils literal notranslate"><span class="pre">pip</span></code><a class="headerlink" href="#With-pip" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install <span class="s1">&#39;OpenDSSDirect.py[extras]&#39;</span>
 </pre></div>
 </div>
-<p><strong>Note</strong>: The Python package <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is now an optional dependency of
-<code class="docutils literal notranslate"><span class="pre">OpenDSSDirect.py</span></code>. If you are unable to install <code class="docutils literal notranslate"><span class="pre">pandas</span></code> using
-<code class="docutils literal notranslate"><span class="pre">pip</span></code>, try <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code>. If you are unable to install
-<code class="docutils literal notranslate"><span class="pre">pandas</span></code> please open an issue on GitHub. Alternatively, you can try
-the following, to not install the <code class="docutils literal notranslate"><span class="pre">extras</span></code> dependency.</p>
+<p><strong>Note</strong>: The Python package <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is now an optional dependency of <code class="docutils literal notranslate"><span class="pre">OpenDSSDirect.py</span></code>. If you are unable to install <code class="docutils literal notranslate"><span class="pre">pandas</span></code> using <code class="docutils literal notranslate"><span class="pre">pip</span></code>, try <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code>. If you are unable to install <code class="docutils literal notranslate"><span class="pre">pandas</span></code> please open an issue on GitHub. Alternatively, you can try the following, to not install the <code class="docutils literal notranslate"><span class="pre">extras</span></code> dependency.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install OpenDSSDirect.py
 </pre></div>
 </div>
@@ -204,9 +208,8 @@ the following, to not install the <code class="docutils literal notranslate"><sp
 </div>
 <div class="section" id="Development">
 <h2>Development<a class="headerlink" href="#Development" title="Permalink to this headline">¶</a></h2>
-<p>If you wish to develop <code class="docutils literal notranslate"><span class="pre">OpenDSSDirect.py</span></code>, first clone the repository
-from GitHub.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/NREL/OpenDSSDirect.py.git
+<p>If you wish to develop <code class="docutils literal notranslate"><span class="pre">OpenDSSDirect.py</span></code>, first clone the repository from GitHub.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/dss-extensions/OpenDSSDirect.py.git
 </pre></div>
 </div>
 <p>(Optional: Set up a virtual environment or a conda environment.)</p>
@@ -221,8 +224,7 @@ from GitHub.</p>
 </div>
 <div class="section" id="Support">
 <h2>Support<a class="headerlink" href="#Support" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">OpenDSSDirect.py</span></code> is currently supported on Windows (x86, x64), Mac
-(x86, x64) and Linux (x64) machines</p>
+<p><code class="docutils literal notranslate"><span class="pre">OpenDSSDirect.py</span></code> is currently supported on Windows (x86, x64), Mac (x86, x64) and Linux (x64) machines</p>
 </div>
 </div>
 
@@ -237,7 +239,7 @@ from GitHub.</p>
         <a href="GettingStarted.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral" title="Indices and tables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="OpenDSSDirect.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -246,11 +248,19 @@ from GitHub.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Dheepak Krishnamurthy.
+        
+        &copy; Copyright 2017, Dheepak Krishnamurthy
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -262,37 +272,16 @@ from GitHub.</p>
   </div>
   
 
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.3.1',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
