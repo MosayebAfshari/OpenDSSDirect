@@ -6,6 +6,7 @@ from __future__ import absolute_import
 import dss as dss_py
 import numpy as np
 import warnings
+from .Iterable import Iterable, Base
 
 # Bind to the FFI module instance. This should be refined in a future version,
 # especially after DSS C-API 0.11 is fully released.
