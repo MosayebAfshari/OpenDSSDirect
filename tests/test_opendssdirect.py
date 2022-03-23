@@ -1622,8 +1622,8 @@ def test_13Node_Executive(dss):
 #        == u"Create a new object within the DSS. Object becomes the active object\nExample: New Line.line1 ..."
 #    )
     assert (
-        dss.Executive.NumCommands() == 124
-    )  # adjusted to the latest version on 2022-02-28
+        dss.Executive.NumCommands() == 125
+    )  # adjusted to the latest version on 2022-03-22
     assert (
         dss.Executive.NumOptions() == 124
     )  # adjusted to the latest version on 2022-02-28
